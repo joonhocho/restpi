@@ -7,7 +7,12 @@ export class Ipdata {
 
   public lookupIp(ip: string): Promise<IpdataResponse> {
     return axios
-      .get(`https://api.ipdata.co/${ip}?api-key=${this.apiKey}`)
-      .then((x) => x.data);
+      .get<IpdataResponse>(`https://api.ipdata.co/${ip}?api-key=${this.apiKey}`)
+      .then(({ data, status, statusText }) => {
+        if (typeof data === 'object' && data && typeof data.ip === 'string') {
+          return data;
+        }
+        throw new Error(JSON.stringify({ status, statusText }));
+      });
   }
 }

@@ -7,7 +7,14 @@ export class UserAgentApp {
 
   public parseUserAgent(ua: string): Promise<UserAgentAppResponse> {
     return axios
-      .get(`https://api.useragent.app/parse?key=${this.apiKey}&ua=${ua}`)
-      .then((x) => x.data);
+      .get<UserAgentAppResponse>(
+        `https://api.useragent.app/parse?key=${this.apiKey}&ua=${ua}`
+      )
+      .then(({ data, status, statusText }) => {
+        if (typeof data === 'object' && data) {
+          return data;
+        }
+        throw new Error(JSON.stringify({ status, statusText }));
+      });
   }
 }
