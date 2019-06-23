@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import {
+  GoogleSafeBrowsingClientInfo,
   GoogleSafeBrowsingRequestBody,
   GoogleSafeBrowsingResponseBody,
   GoogleSafeBrowsingThreatInfo,
@@ -9,15 +10,23 @@ import { ExcludeKeys, OverwriteProps } from 'tsdef';
 // https://developers.google.com/safe-browsing/v4/reference/rest/
 
 export class GoogleSafeBrowsing {
-  constructor(public apiKey: string) {}
+  constructor(
+    public apiKey: string,
+    public client: GoogleSafeBrowsingClientInfo
+  ) {}
 
   public lookup(
-    body: GoogleSafeBrowsingRequestBody
+    body: ExcludeKeys<GoogleSafeBrowsingRequestBody, 'client'>
   ): Promise<GoogleSafeBrowsingResponseBody> {
+    const data: GoogleSafeBrowsingRequestBody = {
+      client: this.client,
+      ...body,
+    };
+
     return axios
       .post<GoogleSafeBrowsingResponseBody>(
         `https://safebrowsing.googleapis.com/v4/threatMatches:find?key=${this.apiKey}`,
-        body,
+        data,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -30,7 +39,7 @@ export class GoogleSafeBrowsing {
   public lookupUrls(
     urls: string[],
     body: OverwriteProps<
-      GoogleSafeBrowsingRequestBody,
+      ExcludeKeys<GoogleSafeBrowsingRequestBody, 'client'>,
       {
         threatInfo: ExcludeKeys<
           GoogleSafeBrowsingThreatInfo,
@@ -42,9 +51,9 @@ export class GoogleSafeBrowsing {
     return this.lookup({
       ...body,
       threatInfo: {
-        ...body.threatInfo,
         threatEntryTypes: ['URL'],
         threatEntries: urls.map((url) => ({ url })),
+        ...body.threatInfo,
       },
     });
   }
