@@ -41,7 +41,7 @@
   "homepage": "https://github.com/joonhocho/restpi#readme",
   "devDependencies": {
     "@types/jest": "^24.0.15",
-    "@types/node": "^12.0.10",
+    "@types/node": "^12.0.12",
     "coveralls": "^3.0.4",
     "jest": "^24.8.0",
     "pre-commit": "^1.2.2",
@@ -49,7 +49,7 @@
     "ts-jest": "^24.0.2",
     "tsapis": "0.0.6",
     "tscpaths": "^0.0.9",
-    "tsdef": "^0.0.8",
+    "tsdef": "^0.0.9",
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
