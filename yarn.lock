@@ -3680,10 +3680,10 @@ ts-jest@^24.0.2:
     semver "^5.5"
     yargs-parser "10.x"
 
-tsapis@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/tsapis/-/tsapis-0.0.6.tgz#0913ca970ce1aba5fafab5c779a121908c7e2c37"
-  integrity sha512-tPlNMtzujteAjF/+B8UwXfArnXPNDge84fOLO1+Ffd7hQiRcmbkfhYNFraIJe1qnSsP3gp2BfBfyd0TKbneDNg==
+tsapis@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.npmjs.org/tsapis/-/tsapis-0.0.9.tgz#0bdd3dc1702968f055e98c52191a183d12af6c35"
+  integrity sha512-kls13nnh6gmvsjIVQr24tOi0X6dkSQmU642zaeUjIXhskosYR3sTlxQsdHRRdW7yLOy/3CnpwXl+D+fwLoByDw==
 
 tscpaths@^0.0.9:
   version "0.0.9"
@@ -3693,10 +3693,10 @@ tscpaths@^0.0.9:
     commander "^2.20.0"
     globby "^9.2.0"
 
-tsdef@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.npmjs.org/tsdef/-/tsdef-0.0.9.tgz#67a1c3c980deb466e8c74f2d05f59349f6fd871a"
-  integrity sha512-T+MAiSgjwWIAjvEcY2qYQFwXzgUK3mPl7gDIWbeEUmTIbChvAvIccv88K06rdkTF+Q7q5QvuHuQ+VFPxdsvSdg==
+tsdef@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.npmjs.org/tsdef/-/tsdef-0.0.13.tgz#c71c2bd756c84887386ac8539ace63a38bc114e1"
+  integrity sha512-Twcdol23BQ+J+WD3NYhqusB7vvCDdK2bvcXnivgHu4xjrxnngUshgB+SWs2FN+I6BxY6BRkaE2KllO403GwbKA==
 
 tslib@1.9.0:
   version "1.9.0"
