@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { UserAgentAppResponse } from 'tsapis';
 
+export { UserAgentAppResponse };
+
 // https://useragent.app
 export class UserAgentApp {
   constructor(public apiKey: string) {}

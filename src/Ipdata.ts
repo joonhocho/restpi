@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { IpdataResponse } from 'tsapis';
 
+export { IpdataResponse };
+
 // https://ipdata.co/
 export class Ipdata {
   constructor(public apiKey: string) {}

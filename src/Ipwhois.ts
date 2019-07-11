@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { IpwhoisResponse } from 'tsapis';
 
+export { IpwhoisResponse };
+
 // https://ipwhois.io/
 export class Ipwhois {
   constructor(public apiKey?: string) {}

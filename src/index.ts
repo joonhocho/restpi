@@ -1,5 +1,10 @@
-export * from 'tsapis';
-export * from './GoogleSafeBrowsing';
-export * from './Ipdata';
-export * from './Ipwhois';
-export * from './UserAgentApp';
+export {
+  GoogleSafeBrowsing,
+  GoogleSafeBrowsingClientInfo,
+  GoogleSafeBrowsingRequestBody,
+  GoogleSafeBrowsingResponseBody,
+  GoogleSafeBrowsingThreatInfo,
+} from './GoogleSafeBrowsing';
+export { Ipdata, IpdataResponse } from './Ipdata';
+export { Ipwhois, IpwhoisResponse } from './Ipwhois';
+export { UserAgentApp, UserAgentAppResponse } from './UserAgentApp';

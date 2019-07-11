@@ -7,6 +7,12 @@ import {
 } from 'tsapis';
 import { ExcludeKeys, OverwriteProps } from 'tsdef';
 
+export {
+  GoogleSafeBrowsingClientInfo,
+  GoogleSafeBrowsingRequestBody,
+  GoogleSafeBrowsingResponseBody,
+  GoogleSafeBrowsingThreatInfo,
+};
 // https://developers.google.com/safe-browsing/v4/reference/rest/
 
 export class GoogleSafeBrowsing {
