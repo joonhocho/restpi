@@ -1,6 +1,6 @@
 {
   "name": "restpi",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "REST API client for various third party cloud services",
   "module": "lib/index.js",
   "main": "dist/node/index.js",
@@ -66,5 +66,6 @@
   },
   "engines": {
     "node": ">=8.0.0"
-  }
+  },
+  "sideEffects": false
 }
